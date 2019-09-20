@@ -1,0 +1,15 @@
+body{
+    background-color: whitesmoke;
+    height:100%;
+}
+html{
+    height:100vh;
+}
+.jumbotron{
+   padding: 2em 1em;
+}
+.jumbotron>*{
+    padding: 10px;
+    border: 2px dashed white;
+    transform: rotate(25deg)
+}
