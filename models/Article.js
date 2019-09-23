@@ -3,10 +3,14 @@ let Schema = mongoose.Schema;
 
 var ArticleSchema = new Schema({
 
-  link: {
-    type: String,
-    required: true
-  }
+    link: {
+        type: String,
+        required: true
+    },
+    title: {
+        type: String,
+        required: true
+    }
 
 });
 var Article = mongoose.model("Article", ArticleSchema);

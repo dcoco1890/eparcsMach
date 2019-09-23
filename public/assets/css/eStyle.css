@@ -1,35 +1,49 @@
-body{
+body {
     background-color: whitesmoke;
-    height:100%;
+    height: 100%;
 }
-html{
-    height:100vh;
+
+html {
+    height: 100vh;
 }
-.jumbotron{
-   padding: 2em 1em;
+
+.jumbotron {
+    padding: .5em 1em;
 }
-.jumbotron>*{
+
+.jumbotron>* {
+    margin: 0;
     padding: 10px;
     border: 2px dashed white;
-   
 }
+
 .content {
     margin: 0 auto;
     padding-top: 30px;
     padding-bottom: 25px;
-    
 }
-#o{
+
+#o {
     padding: 5px 0;
 }
-.box{
-    border: .5px solid rgba(0,0,0,.8);
-    border-radius: 4px;
-    width: 80vw;
-    margin: 0 auto;
 
+.box {
+    border: .5px solid rgba(0, 0, 0, .8);
+    border-radius: 4px;
+    width: 60vw;
+    margin: 4px auto;
+    padding: 10px;
 }
-.box:hover{
-    transform: scale(1.08);
+
+.box:first-child {
+    margin-top: 10px;
+}
+
+.box:hover {
+    transform: scale(1.03);
     transition: 1s all;
+}
+
+#lin {
+    margin: 0 2em;
 }

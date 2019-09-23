@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-sm-2" id="o"> </div>
              <div class="col-sm-8">
-                <h3>Recent Articles</h3>     
+                <h3 class="display-4">Recent Articles</h3>     
             </div>
              <div class="col-sm-2" id="o"> </div>
         </div>
@@ -15,10 +15,10 @@
             {{#each Article}}
                 <div class="box">
                     <div id="head">
-                        <p>{{this.link}}</p>
+                        <p>{{this.title}}</p>
                     </div>
                     <div class="d-flex justify-content-end">
-                         <a href={{this.link}}>LINK</a>
+                         <a id="lin" href={{this.link}}>LINK</a>
                     </div>
                 </div>
             {{/each}}
