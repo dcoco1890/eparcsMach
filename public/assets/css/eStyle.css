@@ -11,5 +11,25 @@ html{
 .jumbotron>*{
     padding: 10px;
     border: 2px dashed white;
-    transform: rotate(25deg)
+   
+}
+.content {
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    
+}
+#o{
+    padding: 5px 0;
+}
+.box{
+    border: .5px solid rgba(0,0,0,.8);
+    border-radius: 4px;
+    width: 80vw;
+    margin: 0 auto;
+
+}
+.box:hover{
+    transform: scale(1.08);
+    transition: 1s all;
 }
