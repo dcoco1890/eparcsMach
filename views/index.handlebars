@@ -1,5 +1,5 @@
 <div class="jumbotron text-center d-flex justify-content-around">
-    <p>Scrape Daddy</p> 
+    <p>Richmond NBC12 News Scraper</p> 
     <p>big daddy</p>
 </div>
 <section class="container-fluid">
@@ -13,11 +13,11 @@
         </div>
         <div class="row">
             {{#each Article}}
-                <div class="box">
+                <div class="box" data-id={{this._id}}>
                     <div id="head">
                         <p>{{this.title}}</p>
                     </div>
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-end" >
                          <a id="lin" href={{this.link}}>LINK</a>
                     </div>
                 </div>

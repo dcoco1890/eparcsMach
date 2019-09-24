@@ -33,6 +33,13 @@ html {
     width: 60vw;
     margin: 4px auto;
     padding: 10px;
+    background: rgba(161, 211, 214, 0.336);
+    cursor: pointer;
+}
+
+.boxOpen {
+    height: 150px;
+    transition: 3s all;
 }
 
 .box:first-child {
@@ -41,7 +48,12 @@ html {
 
 .box:hover {
     transform: scale(1.03);
-    transition: 1s all;
+    transition: .5s all;
+}
+
+.box:active {
+    transform: scale(.97);
+    transition: .3s all;
 }
 
 #lin {
