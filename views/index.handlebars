@@ -13,9 +13,9 @@
         </div>
         <div class="row">
             {{#each Article}}
-                <div class="box" data-id={{this._id}}>
+                <div class="box" data-id={{this.id}}>
                     <div id="head">
-                        <p>{{this.title}}</p>
+                        <p id="art-tit">{{this.title}}</p>
                     </div>
                     <div class="d-flex justify-content-end" >
                          <a id="lin" href={{this.link}}>LINK</a>

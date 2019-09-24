@@ -13,7 +13,7 @@ module.exports = app => {
             $("a.unstyled-link").each((i, element) => {
                 count++;
                 let obj = {};
-                let title = "https://www.nbc12.com/";
+                let title = "https://www.nbc12.com";
                 title += $(element).attr("href");
                 obj.link = title;
 
@@ -37,7 +37,19 @@ module.exports = app => {
     // finds article by ID number, sends back that data to the front end.
     app.get("/scrape/:id", (req, res) => {
         db.Article.findOne({ _id: req.params.id }).then(resp => {
-            res.json(resp);
+
+            axios.get(resp.link).then(response => {
+                var $ = cheerio.load(response.data);
+                var arr = []
+                $("div .card-content").each((i, element) => {
+                    arr.push($(element).text().trim());
+                });
+                res.json(arr);
+            })
+
+
+        }).catch(err => {
+            console.log(err);
         })
     })
 
