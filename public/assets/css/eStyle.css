@@ -42,7 +42,7 @@ html {
 }
 
 .boxOpen {
-    height: 150px;
+    height: 100%;
     transition: 3s all;
 }
 
@@ -62,4 +62,8 @@ html {
 
 #lin {
     margin: 0 2em;
+}
+.art-bod{
+    padding: 5px 15px;
+    font-size: 1rem;
 }
