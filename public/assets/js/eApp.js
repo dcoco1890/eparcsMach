@@ -5,11 +5,11 @@ $(document).ready(function() {
 
     box.on("click", function() {
         var id = $(this).attr("data-id");
-        var at = $(this).attr("id");
+        var at = $(this).attr("class");
         if(at === "ran"){
            
         } else{
-            $(this).attr("id", "ran");
+            $(this).attr("class", "ran");
             $.ajax({
                 type: "GET",
                 url: "/scrape/" + id

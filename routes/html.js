@@ -4,7 +4,7 @@ const cheerio = require("cheerio");
 
 module.exports = (app) => {
     app.get("/", (req, res) => {
-        db.Article.find({}).sort("-id").limit(10).then(data => {
+        db.Article.find({}).sort("-id").limit(50).then(data => {
             res.render("index" ,{
                 Article: data
             });
@@ -14,6 +14,7 @@ module.exports = (app) => {
     });
 
     app.get("/scrape", (req, res) => {
+
         res.render("scrape");
     })
 }
