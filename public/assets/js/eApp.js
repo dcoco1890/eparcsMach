@@ -1,15 +1,16 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
+    const $body = $(".art-bod");
     let box = $(".box");
     console.log(box);
 
-    box.on("click", function() {
+    box.on("click", function () {
         var id = $(this).attr("data-id");
         var at = $(this).attr("class");
-        if(at === "ran"){
-           
-        } else{
-            $(this).attr("class", "ran");
+        if (at === "ran") {
+
+        } else {
+            $(this).addClass("ran");
             $.ajax({
                 type: "GET",
                 url: "/scrape/" + id
@@ -24,7 +25,11 @@ $(document).ready(function() {
         }
         // $(this).toggleClass("boxOpen");
 
-      
+
 
     });
+
+    function updateArticle(body){
+        
+    }
 });

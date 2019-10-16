@@ -10,7 +10,15 @@ var ArticleSchema = new Schema({
     title: {
         type: String,
         required: true
-    }
+    },
+    created: {
+        type: Date,
+        default: Date.now
+    },
+    notes: [{
+        type: Schema.Types.ObjectId,
+        ref: "Note"
+    }]
 
 
 });

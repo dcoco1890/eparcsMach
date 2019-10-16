@@ -1,19 +1,17 @@
 const db = require("../models");
 var axios = require("axios");
 var cheerio = require("cheerio");
-let count = 0;
+
 
 module.exports = app => {
 
-    app.get("/scrape", (req, res) => {
-       count = 0;
+    app.get("/api/scrape", (req, res) => {
         axios.get("https://www.nbc12.com/news/richmond/").then(response => {
+
             var $ = cheerio.load(response.data);
-            
-            
 
             $("a.unstyled-link").each((i, element) => {
-               
+
                 let obj = {};
                 let title = "https://www.nbc12.com";
                 title += $(element).attr("href");
@@ -22,24 +20,16 @@ module.exports = app => {
                 obj.title = $(element).parent("h4").text().trim();
 
                 if (obj.link && obj.title) {
-                    count++;
-                    arts.push(obj);
-                    db.Article.create(obj).then(function(art) {
+
+                    db.Article.create(obj).then(function (art) {
                         console.log(`----____Article Added!___----`);
-                        // console.log(art);
-                    }).catch(function(err) { console.log(err); });
+                        console.log(art);
+                    }).catch(function (err) { console.log(err); });
                 }
             });
-            console.log(count);
-          
-        });
 
-        db.Article.find({}).sort("id").limit(count).then(data => {
-            res.render("index", {
-                Article: data
-            })
-        })
-       
+        });
+        res.redirect("/")
 
     });
 

@@ -11,10 +11,11 @@ html {
     padding: .5em 1em;
 }
 
-.jumbotron>* {
+.jumbotron > p {
     margin: 0;
     padding: 10px;
-    border: 2px dashed white;
+    display: inline-block;
+    
 }
 
 .content {
@@ -67,3 +68,12 @@ html {
     padding: 5px 15px;
     font-size: 1rem;
 }
+
+@media only screen and (max-width: 900px) {
+   #o, #p{
+       display:none;
+   }
+   .box{
+       width: 94vw;
+   }
+  }
